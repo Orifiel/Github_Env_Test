@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "ubuntuNodejs" do |ubuntuNodejs|
-    ubuntuNodejs.vm.network "public_network", ip: "192.168.87.28", use_dhcp_assigned_default_route: true
+    ubuntuNodejs.vm.network "public_network", use_dhcp_assigned_default_route: true
     ubuntuNodejs.vm.network "forwarded_port", guest:3000, host:8089
     
     
